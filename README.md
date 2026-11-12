@@ -1,1 +1,1 @@
-# Rock-Paper-Scissor---The-odin-project
+# Rock-Paper-Scissor-->The-Odin-Project

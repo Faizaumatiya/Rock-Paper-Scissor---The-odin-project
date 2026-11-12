@@ -3,14 +3,15 @@
 
 function getComputerChoice() {
   const compChoice = Math.floor(Math.random() * 3) + 1;
+  // console.log(compChoice);
   if (compChoice === 1) {
-    console.log("rock");
+    console.log("Computer's choice: rock");
     return "rock";
   } else if (compChoice === 2) {
-    console.log("paper");
+    console.log("Computer's choice: paper");
     return "paper";
   } else {
-    console.log("scissors");
+    console.log("Computer's choice: scissors");
     return "scissors";
   }
 }
@@ -18,17 +19,20 @@ function getComputerChoice() {
 function getHumanChoice() {
   const resp = prompt("your choice?");
   if (resp.toLowerCase() === "rock") {
+    console.log("Your choice: " + resp.toLowerCase());
     return "rock";
   } else if (resp.toLowerCase() === "paper") {
+    console.log("Your choice: " + resp.toLowerCase());
     return "paper";
   } else {
+    console.log("Your choice: " + resp.toLowerCase());
     return "scissors";
   }
 }
 
 //plays game 5 times
 
-function playGame(times) {
+function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
@@ -72,7 +76,7 @@ function playGame(times) {
   }
 }
 
-playGame(5);
+playGame();
 
 //plays round once.
 // function playRound(humanChoice, computerChoice) {

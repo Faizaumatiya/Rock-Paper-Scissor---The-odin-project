@@ -20,13 +20,16 @@ function getHumanChoice() {
   const resp = prompt("your choice?");
   if (resp.toLowerCase() === "rock") {
     console.log("Your choice: " + resp.toLowerCase());
-    return "rock";
+    return resp.toLowerCase();
   } else if (resp.toLowerCase() === "paper") {
     console.log("Your choice: " + resp.toLowerCase());
-    return "paper";
-  } else {
+    return resp.toLowerCase();
+  } else if (resp.toLowerCase() === "scissors") {
     console.log("Your choice: " + resp.toLowerCase());
-    return "scissors";
+    return resp.toLowerCase();
+  } else {
+    console.log("invalid response");
+    return resp.toLowerCase();
   }
 }
 
@@ -55,8 +58,14 @@ function playGame() {
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
       console.log("you lose! rock beats scissors");
       computerScore++;
-    } else {
+    } else if (humanChoice === "rock" && computerChoice === "rock") {
       console.log("draw!");
+    } else if (humanChoice === "paper" && computerChoice === "paper") {
+      console.log("draw!");
+    } else if (humanChoice === "scissors" && computerChoice === "scissors") {
+      console.log("draw");
+    } else {
+      console.log("Invalid round");
     }
     console.log("Human Score = " + humanScore);
     console.log("Computer Score = " + computerScore);
